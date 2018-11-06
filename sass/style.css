@@ -1,0 +1,665 @@
+@charset "UTF-8";
+body, html {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.max--width {
+  max-width: 1980px; }
+
+/* Colors */
+/*#8e8268*/
+/*#8e8268*/
+/**/
+/**/
+/**/
+/**/
+/**/
+/* das babyblau mit opacity */
+/* fonts/ main colors & main styles */
+p, h1, h2, h3, h4, h5, ul, li, a, span {
+  color: #46494c;
+  letter-spacing: -1.5px; }
+
+p {
+  line-height: 1.7;
+  font-size: 0.9rem;
+  text-align: justify; }
+
+h1 {
+  color: #527c99;
+  font-size: 4.5rem;
+  font-weight: bold;
+  letter-spacing: -5px;
+  padding: 0rem 3rem;
+  border-bottom: 1px solid rgba(82, 124, 153, 0.3); }
+
+h1 {
+  padding-bottom: 5px; }
+
+h2 {
+  text-align: center;
+  grid-column: 1 / -1;
+  grid-row: 1 / 1;
+  font-size: 2rem;
+  color: #527c99;
+  font-weight: 600;
+  line-height: 1.5; }
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -2px;
+  padding: 5px;
+  font-weight: 600;
+  color: #46494c; }
+
+h4 {
+  text-align: center;
+  grid-column: 2 / 8;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: center;
+  font-size: 1.125rem;
+  padding: 0rem 8rem 0.75rem 8rem;
+  margin-top: -0.3rem;
+  border-bottom: 1px solid rgba(70, 73, 76, 0.2); }
+
+h5 {
+  text-align: center;
+  grid-column: 2 / 8;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  font-size: 1.25rem;
+  padding: 0.5rem 0rem 2rem 0rem;
+  line-height: 1.3; }
+
+h5.header {
+  font-size: 2rem;
+  letter-spacing: -2px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7); }
+
+li {
+  font-size: 0.85rem; }
+
+a {
+  letter-spacing: -1px; }
+
+/* font: under name*/
+.headline--h3__color {
+  color: #d9d9d9; }
+
+section {
+  display: grid;
+  grid-template-columns: repeat(8, 5fr);
+  grid-gap: 20px 40px;
+  width: 100%;
+  padding: 1.5rem 3rem 2rem 3rem;
+  height: auto; }
+
+section.white {
+  background-color: #dfdfdf; }
+
+section.grey {
+  background-color: rgba(170, 160, 160, 0.6); }
+
+p {
+  grid-column: 2/span 3;
+  grid-row: 5/span 1; }
+
+/* 作った物*/
+figure {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px grey;
+  border-radius: 3px; }
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block; }
+
+.project__left, .project__right {
+  grid-column: 4 /span 1;
+  grid-row: 4/ span 1;
+  justify-self: end;
+  z-index: 10; }
+  .project__left i, .project__right i {
+    font-size: 1.3rem;
+    background-color: #527c99;
+    color: #dfdfdf;
+    padding: 0.8rem;
+    border-radius: 0px 0px 0px 4px; }
+
+.project__right {
+  grid-column: 7 /span 1; }
+
+/* 繋ぐコーヒー*/
+figure.span__all {
+  grid-column: 2 / 8; }
+
+/* minutes of meeting */
+figure.minutes {
+  grid-column: 2 / 8; }
+
+.minutes__left {
+  grid-column: 2/4; }
+
+.minutes__middle {
+  grid-column: 4/6; }
+
+.minutes__right {
+  grid-column: 6/8; }
+
+/* skills */
+section ul.skills.skills__left {
+  grid-column: 2 / span 3; }
+
+section ul.skills.skills__right {
+  grid-column: 5/ span 3; }
+
+/*banner main picture*/
+#banner {
+  background-image: url("../images/ayaTanabe.jpg");
+  /* to get the path right, you need to think where you are first*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*this is what scales the image*/
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  z-index: 0; }
+
+/* media query for ipads fix for background-attachment */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .container-fluid__banner {
+    background-position: center;
+    background-attachment: local; } }
+.headline {
+  width: auto;
+  height: auto;
+  padding-top: 23%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center; }
+
+.navbar--smartphone {
+  display: none; }
+
+.navbar {
+  position: fixed;
+  top: 5%;
+  left: 86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  text-align: center;
+  z-index: 10; }
+
+.arrow {
+  position: fixed;
+  bottom: 0%;
+  left: 86%;
+  z-index: 1000; }
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  padding: 0; }
+
+.navbar ul.nav li, .arrow {
+  width: 112px;
+  width: 112px;
+  width: 5.5rem;
+  padding: 0px 0px;
+  padding: 0px 0px;
+  padding: 0rem 0rem; }
+
+.navbar ul.nav li a, .navbar ul.nav li a:hover {
+  text-decoration: none;
+  color: #dfdfdf;
+  font-weight: 500;
+  padding: 1.25rem 0rem;
+  /* height of the nav */ }
+
+li.nav__animation, .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.nav__animation i {
+  font-size: 32px;
+  font-size: 32px;
+  font-size: 1.5rem;
+  padding: 1.25rem 0rem;
+  color: #dfdfdf;
+  position: relative;
+  -webkit-animation-name: mymove;
+  animation-name: mymove;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear; }
+
+.arrow i {
+  padding: 0.9rem 0rem;
+  font-size: 1.5rem;
+  color: #dfdfdf; }
+
+@-webkit-keyframes mymove {
+  0% {
+    top: 0px; }
+  50% {
+    top: 10px; }
+  100% {
+    top: 0px; } }
+@keyframes mymove {
+  0% {
+    top: 0px; }
+  50% {
+    top: 10px; }
+  100% {
+    top: 0px; } }
+.navbar ul.nav li {
+  background-color: #474853; }
+
+/*different from rest because of contrast to footer when scrolling down*/
+/* the border-radius 4px turned out to be a pain in the ass because there are so
+many different states involved all need to be adjusted */
+/* again there seems to be a white background color comming from the bootstrap css
+this is to fix this */
+/* THIS IS WHERTE THE SPY IS TAKING EFFECT*/
+.navbar ul.nav li.active a, .arrow {
+  border-radius: 0px 0px 4px 4px;
+  background-color: #527c99; }
+
+.arrow {
+  border-radius: 4px 4px 0px 0px; }
+
+/* active a:hover is in there because of a border that comes from the bootstrap css */
+ul.nav.nav-tabs, ul.nav.nav-tabs a, .navbar ul.nav li.active a:hover {
+  color: #dfdfdf;
+  border: none;
+  border-radius: 0px;
+  margin: 0; }
+
+/*this one drove me crazy, I could not find the state that needed to be
+adjusted for the round corners. Eventually, I found it with dev Tools
+and all I needed to do was write the path down*/
+ul.nav li a:hover {
+  background-color: #527c99;
+  border-radius: 0px 0px 0px 0px; }
+
+.nav--bordertop {
+  border-radius: 4px 4px 0px 0px; }
+
+.nav--borderbottom {
+  border-radius: 0px 0px 4px 4px; }
+
+.project {
+  width: 100%;
+  height: 100%;
+  max-height: auto;
+  overflow: hidden;
+  position: relative;
+  grid-column: 2 / span 3;
+  grid-row: 4 / span 1; }
+
+.project.right {
+  grid-column: 5/ span 3; }
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  transition: all 250ms linear 0ms;
+  overflow: hidden; }
+
+/* transition on element directly */
+.project__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: rgba(134, 179, 209, 0.8);
+  /* set opacity to color, so font is not effected */
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+  opacity: 1;
+  z-index: 0; }
+
+/* overlay for faded red color
+over effect directly on project*/
+.project:hover .project__overlay {
+  width: calc(100% + 1px);
+  /* to fix additoinal 1px on hover */
+  left: 0; }
+
+div.project__header {
+  white-space: nowrap; }
+
+h3.project__header__text {
+  font-size: 1.5rem;
+  color: #dfdfdf;
+  font-weight: 500;
+  padding-bottom: 0.35rem;
+  position: absolute;
+  top: 6%;
+  left: 7%;
+  border-bottom: 2px solid transparent;
+  width: 0%;
+  white-space: nowrap;
+  transition: all 450ms linear 0ms; }
+
+h3.project__header__text.text__color {
+  color: #46494c;
+  font-weight: 500; }
+
+.project:hover .project__header__text {
+  border-bottom: 2px solid #dfdfdf;
+  width: 77%;
+  z-index: 1; }
+
+.project:hover .project__header__text.text__color {
+  border-bottom: 2px solid #46494c; }
+
+/* size of the stars*/
+.fas {
+  font-size: 13.2px;
+  font-size: 13.2px;
+  font-size: 0.825rem; }
+
+/* skills section styles */
+.skills li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: background-color 150ms ease-in 0ms;
+  transition: background-color 150ms ease-in 0ms;
+  padding: 6px;
+  margin: -4px; }
+
+.skills {
+  font-size: 1rem;
+  font-weight: 400; }
+
+.margin--bottom {
+  margin-bottom: 20px; }
+
+.fa--color {
+  color: rgba(71, 72, 83, 0.99); }
+
+.fa--colorfaded {
+  color: rgba(71, 72, 83, 0.3); }
+
+.skills--hover i {
+  -webkit-transition: padding-left 250ms ease-in-out;
+  transition: padding-left 250ms ease-in-out; }
+
+.skills--hover:hover i {
+  padding-left: 3.2px;
+  padding-left: 3.2px;
+  padding-left: 0.2rem;
+  color: #dfdfdf; }
+
+.skills--hover:hover span {
+  color: #dfdfdf; }
+
+.skills--hover:hover {
+  background-color: rgba(82, 124, 153, 0.5);
+  color: #dfdfdf;
+  border-radius: 2px;
+  padding: 0px -16px;
+  padding: 0px -16px;
+  padding: 0rem -1rem; }
+
+footer {
+  background-color: rgba(71, 72, 83, 0.99);
+  padding: 1rem 12rem;
+  color: #dfdfdf;
+  display: grid;
+  grid-template-columns: repeat(8, 5fr);
+  grid-gap: 20px 40px;
+  width: 100%;
+  padding: 1.5rem 3rem 2rem 3rem; }
+
+footer h2, footer h4, footer h5 {
+  color: #dfdfdf; }
+
+footer h4 {
+  border-bottom: none;
+  padding-bottom: 0; }
+
+footer h5 {
+  border-bottom: 1px solid rgba(223, 223, 223, 0.5);
+  padding: 0rem 0rem 1rem 0rem;
+  margin-bottom: 10rem; }
+
+/* Portrait phones max470 */
+@media all and (max-width: 470px) {
+  .hide1 {
+    display: none; }
+
+  section, footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px 0px;
+    width: 100%;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    height: auto; }
+
+  h4, h5, figure, .project, p, .project__left, .project.right, .project__overlay, .project__right, figure.span__all, .minutes__left, .minutes__middle, .minutes__right, section ul.skills.skills__left, section ul.skills.skills__right {
+    grid-column: 1 /span 1; }
+
+  .project.right {
+    grid-row: 5/ span 1; }
+
+  p {
+    grid-row: 6/ span 1; }
+
+  h4 {
+    text-align: center;
+    font-size: 1.125rem;
+    padding: 0rem 0rem 0.75rem 0rem;
+    border-bottom: 1px solid rgba(70, 73, 76, 0.2); }
+
+  .arrow {
+    left: 0;
+    width: 100%;
+    height: 2.75rem;
+    border-radius: 0px;
+    background-color: #527c99;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+  .arrow:hover {
+    background-color: #3F5E75; }
+
+  p {
+    font-size: 0.9rem; }
+
+  h1 {
+    font-size: 2.8rem;
+    color: #527c99;
+    border-bottom: 1px solid rgba(82, 124, 153, 0.5);
+    padding: 0rem 2.5rem 0.2rem 2.5rem; }
+
+  h2 {
+    font-size: 1.5rem; }
+
+  h3 {
+    font-size: 1rem; }
+
+  h4 {
+    font-size: 1rem;
+    padding-top: 0.2rem; }
+
+  h5 {
+    font-size: 1.125rem;
+    padding: 0.5rem 0rem 1rem 0rem; } }
+/* Portrait phones max600 */
+@media all and (min-width: 470px) and (max-width: 600px) {
+  .hide1 {
+    display: none; }
+
+  section, footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px 0px;
+    width: 100%;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    height: auto; }
+
+  h4, h5, figure, .project, p, .project__left, .project.right, .project__overlay, .project__right, figure.span__all, .minutes__left, .minutes__middle, .minutes__right, section ul.skills.skills__left, section ul.skills.skills__right {
+    grid-column: 1 /span 1; }
+
+  .project.right {
+    grid-row: 5/ span 1; }
+
+  p {
+    grid-row: 6/ span 1; }
+
+  h4 {
+    text-align: center;
+    padding: 0rem 0rem 0.75rem 0rem;
+    border-bottom: 1px solid rgba(70, 73, 76, 0.2); }
+
+  .arrow {
+    left: 0;
+    width: 100%;
+    height: 2.75rem;
+    border-radius: 0px;
+    background-color: #527c99;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+  .arrow:hover {
+    background-color: #3F5E75; }
+
+  p {
+    font-size: 0.9rem; }
+
+  h1 {
+    font-size: 3.5rem;
+    color: #527c99;
+    border-bottom: 1px solid rgba(82, 124, 153, 0.5);
+    padding: 0rem 2.5rem 0.2rem 2.5rem; }
+
+  h2 {
+    font-size: 1.6rem; }
+
+  h3 {
+    font-size: 1.125rem; }
+
+  h4 {
+    font-size: 1.125rem;
+    padding-top: 0.2rem; }
+
+  h5 {
+    font-size: 1.3rem;
+    padding: 0.5rem 0rem 1rem 0rem; } }
+/* Portrait phones max768 */
+@media all and (min-width: 601px) and (max-width: 768px) {
+  .hide1 {
+    display: none; }
+
+  section, footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px 0px;
+    width: 100%;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    height: auto; }
+
+  h4, h5, figure, .project, p, .project__left, .project.right, .project__overlay, .project__right, figure.span__all, .minutes__left, .minutes__middle, .minutes__right, section ul.skills.skills__left, section ul.skills.skills__right {
+    grid-column: 1 /span 1; }
+
+  section#skills {
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 20px 40px; }
+
+  section#skills h4, section#skills h5 {
+    grid-column: 1 / span 2; }
+
+  section#skills ul:nth-child(2n-1) {
+    grid-column: 2 / span 1; }
+
+  p {
+    grid-row: 6/ span 1; }
+
+  h4 {
+    text-align: center;
+    padding: 0rem 0rem 0.75rem 0rem;
+    border-bottom: 1px solid rgba(70, 73, 76, 0.2); }
+
+  .arrow {
+    left: 0;
+    width: 100%;
+    height: 2.75rem;
+    border-radius: 0px;
+    background-color: #527c99;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+  .arrow:hover {
+    background-color: #3F5E75; }
+
+  p {
+    font-size: 0.9rem; }
+
+  h1 {
+    font-size: 3.5rem;
+    color: #527c99;
+    border-bottom: 1px solid rgba(82, 124, 153, 0.5);
+    padding: 0rem 2.5rem 0.2rem 2.5rem; }
+
+  h2 {
+    font-size: 1.8rem; }
+
+  h3 {
+    font-size: 1.3rem; }
+
+  h4 {
+    font-size: 1.3rem;
+    padding-top: 0.2rem; }
+
+  h5 {
+    font-size: 1.5rem;
+    padding: 0.5rem 0rem 1rem 0rem; } }
+
+/*# sourceMappingURL=style.css.map */

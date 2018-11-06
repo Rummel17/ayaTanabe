@@ -1,0 +1,32 @@
+body, html {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.max--width{
+  max-width: 1980px;
+}
+
+@import "helpers/placeholders";
+@import "helpers/variables";
+@import "components/font";
+@import "components/section";
+@import "components/banner";
+@import "components/navbar";
+@import "components/overlay";
+@import "components/skills";
+@import "components/footer";
+@import "layout/max-width470";
+@import "layout/min-width471px_max-width600px";
+@import "layout/min-width601px_max-width768px";
+@import "layout/min-width769px_max-width1024px";

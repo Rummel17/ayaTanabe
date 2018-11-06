@@ -1,0 +1,78 @@
+section {
+  display: grid;
+  grid-template-columns: repeat(8, 5fr);
+  grid-gap: 20px 40px;
+  width: 100%;
+  padding: 1.5rem 3rem 2rem 3rem;
+  height: auto;
+}
+
+section.white{background-color: $fontWhite}
+section.grey {background-color: $sectionGray;}
+
+p {
+  grid-column: 2 / span 3 ;
+  grid-row: 5 / span 1 ;
+}
+
+
+/* 作った物*/
+
+figure{
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px grey;
+  border-radius: 3px;
+  img {
+    width:100%;
+    height: auto;
+    display: block;}
+}
+
+
+.project__left, .project__right{
+  grid-column: 4 /span 1;
+  grid-row: 4/ span 1;
+  justify-self: end;
+  z-index: 10;
+  i{
+    font-size: 1.3rem;
+    background-color: $fontBlue;
+    color:$fontWhite;
+    padding: 0.8rem;
+    border-radius: 0px 0px 0px 4px;
+  }
+}
+.project__right{grid-column: 7 /span 1;}
+
+
+/* 繋ぐコーヒー*/
+
+figure.span__all {
+  grid-column: 2 / 8;
+}
+/* minutes of meeting */
+figure.minutes {
+  grid-column: 2 / 8;
+}
+
+.minutes__left{
+  grid-column: 2/4;
+}
+.minutes__middle {
+  grid-column: 4/6;
+}
+.minutes__right {
+  grid-column: 6/8;
+}
+
+/* skills */
+
+section ul.skills.skills__left{
+  grid-column: 2 / span 3;
+}
+
+section ul.skills.skills__right {
+  grid-column: 5/ span 3;
+}

@@ -1,0 +1,133 @@
+
+.navbar--smartphone {
+  display: none;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 5%;
+  left: 86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  text-align: center;
+  z-index: 10;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 0%;
+  left: 86%;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  padding: 0;
+}
+
+.navbar ul.nav li, .arrow {
+  width: 112px;
+  width: 112px;
+  width: 5.5rem;
+  padding: 0px 0px;
+  padding: 0px 0px;
+  padding: 0rem 0rem;
+}
+
+.navbar ul.nav li a, .navbar ul.nav li a:hover {
+  text-decoration: none;
+  color: $fontWhite;
+  font-weight: 500;
+  padding: 1.25rem 0rem;/* height of the nav */
+}
+
+li.nav__animation, .arrow {
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-pack: center;
+     -ms-flex-pack: center;
+         justify-content: center;
+ -webkit-box-align: center;
+     -ms-flex-align: center;
+         align-items: center;
+}
+.nav__animation i{
+ font-size: 32px;
+ font-size: 32px;
+ font-size: 1.5rem;
+ padding: 1.25rem 0rem;
+ color:$fontWhite;
+ position: relative;
+ -webkit-animation-name: mymove;
+         animation-name: mymove;
+ -webkit-animation-duration: 1.2s;
+         animation-duration: 1.2s;
+ -webkit-animation-iteration-count: infinite;
+         animation-iteration-count: infinite;
+ -webkit-animation-timing-function: linear;
+         animation-timing-function: linear;
+}
+
+.arrow i{
+
+  padding: 0.9rem 0rem;
+  font-size: 1.5rem;
+  color:$fontWhite;
+}
+
+@-webkit-keyframes mymove {
+   0% {top: 0px;}
+   50% {top: 10px;}
+   100% {top: 0px;}
+}
+
+@keyframes mymove {
+   0% {top: 0px;}
+   50% {top: 10px;}
+   100% {top: 0px;}
+}
+
+.navbar ul.nav li {background-color: $navbarGray;}/*different from rest because of contrast to footer when scrolling down*/
+
+/* the border-radius 4px turned out to be a pain in the ass because there are so
+many different states involved all need to be adjusted */
+
+/* again there seems to be a white background color comming from the bootstrap css
+this is to fix this */
+/* THIS IS WHERTE THE SPY IS TAKING EFFECT*/
+.navbar ul.nav li.active a, .arrow {
+  border-radius: 0px 0px 4px 4px;
+  background-color: $fontBlue;
+}
+
+.arrow {
+  border-radius: 4px 4px 0px 0px;
+}
+
+/* active a:hover is in there because of a border that comes from the bootstrap css */
+ul.nav.nav-tabs, ul.nav.nav-tabs a, .navbar ul.nav li.active a:hover {
+  color: $fontWhite;
+  border: none;
+  border-radius: 0px;
+  margin: 0;
+}
+
+/*this one drove me crazy, I could not find the state that needed to be
+adjusted for the round corners. Eventually, I found it with dev Tools
+and all I needed to do was write the path down*/
+ul.nav li a:hover {
+    background-color: $fontBlue;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.nav--bordertop {border-radius: 4px 4px 0px 0px;}
+.nav--borderbottom {border-radius: 0px 0px 4px 4px;}

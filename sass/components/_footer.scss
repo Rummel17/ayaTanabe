@@ -1,0 +1,24 @@
+footer {
+  background-color:$footerGray;
+  padding: 1rem 12rem;
+  color: $fontWhite;
+  display: grid;
+  grid-template-columns: repeat(8, 5fr);
+  grid-gap: 20px 40px;
+  width: 100%;
+  padding: 1.5rem 3rem 2rem 3rem;
+
+}
+footer h2, footer h4, footer h5 {
+  color: $fontWhite;
+}
+
+footer h4 {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+footer h5 {
+  border-bottom: 1px solid $fontWhiteFaded;
+  padding: 0rem 0rem 1rem 0rem;
+  margin-bottom: 10rem;
+}
