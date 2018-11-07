@@ -3,22 +3,41 @@ footer {
   padding: 1rem 12rem;
   color: $fontWhite;
   display: grid;
-  grid-template-columns: repeat(8, 5fr);
+  grid-template-columns: repeat(5, 5fr);
   grid-gap: 20px 40px;
   width: 100%;
-  padding: 1.5rem 3rem 2rem 3rem;
+  padding: 1.5rem 3rem 5rem 3rem;
 
 }
 footer h2, footer h4, footer h5 {
   color: $fontWhite;
 }
 
-footer h4 {
-  border-bottom: none;
-  padding-bottom: 0;
+footer h2 {
+    border-bottom: 1px solid $fontWhiteFaded;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    grid-column: 2 / span 3;
 }
-footer h5 {
-  border-bottom: 1px solid $fontWhiteFaded;
-  padding: 0rem 0rem 1rem 0rem;
-  margin-bottom: 10rem;
+.contact {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+  justify-self: center;
+
 }
+
+.contact__mail {
+  color:$footerGray;
+}
+
+.contact__icon {
+  background-color: $fontWhite;
+  border-radius: 50px;
+  width: 2rem;
+  padding: 0.5rem 0px;
+  text-align: center;
+}
+.contact__icon:hover {
+  background-color: $fontWhitehover;
+}
+.contact__icon {-webkit-transition: background-color 200ms linear 0ms;transition: background-color 250ms linear 0ms;}
