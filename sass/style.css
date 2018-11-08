@@ -57,38 +57,18 @@ h3 {
   font-weight: 600;
   color: #46494c; }
 
-h4 {
-  text-align: center;
-  grid-column: 2 / 8;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  justify-self: center;
-  font-size: 1.125rem;
-  padding: 0rem 8rem 0.75rem 8rem;
-  margin-top: -0.3rem;
-  border-bottom: 1px solid rgba(70, 73, 76, 0.2); }
-
 h5 {
-  text-align: center;
-  grid-column: 2 / 8;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  font-size: 1.25rem;
-  padding: 1rem 0rem 1rem 0rem;
-  line-height: 1.3; }
+  grid-column: 1 / -1;
+  justify-self: center;
+  grid-row: 2/ 3;
+  border-top: 1px solid rgba(70, 73, 76, 0.2);
+  padding: 1.5rem 0rem 1rem 0rem; }
 
 h5.header {
   font-size: 2rem;
   letter-spacing: -2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.7); }
-
-section h5.one {
-  grid-column: 2 / 8;
-  justify-self: center;
-  grid-row: 2/ 3;
-  border-top: 1px solid rgba(70, 73, 76, 0.2);
-  padding: 1.5rem 0rem 1rem 0rem; }
 
 li {
   font-size: 0.85rem; }
@@ -103,6 +83,7 @@ a {
 section {
   display: grid;
   grid-template-columns: repeat(8, 5fr);
+  grid-template-rows: auto auto auto;
   grid-gap: 20px 40px;
   width: 100%;
   padding: 1.5rem 3rem 3rem 3rem;
@@ -124,15 +105,22 @@ figure {
   height: auto;
   overflow: hidden;
   box-shadow: 3px 3px 10px grey;
-  border-radius: 3px; }
+  border-radius: 3px;
+  grid-column: 2 / span 3;
+  grid-row: 3/ span 1; }
   figure img {
     width: 100%;
     height: auto;
     display: block; }
 
+figure.right {
+  grid-column: 5/ span 3;
+  grid-row: 3/ span 1; }
+
+/*the link icons*/
 .project__left, .project__right {
   grid-column: 4 /span 1;
-  grid-row: 4/ span 1;
+  grid-row: 3/ span 1;
   justify-self: end;
   z-index: 10; }
   .project__left i, .project__right i {
@@ -148,6 +136,9 @@ figure {
 /* 繋ぐコーヒー*/
 figure.span__all {
   grid-column: 2 / 8; }
+
+figure.span__taisanji {
+  grid-column: 3 / 5; }
 
 /* minutes of meeting */
 figure.minutes {
@@ -328,12 +319,7 @@ ul.nav li a:hover {
   height: 100%;
   max-height: auto;
   overflow: hidden;
-  position: relative;
-  grid-column: 2 / span 3;
-  grid-row: 4 / span 1; }
-
-.project.right {
-  grid-column: 5/ span 3; }
+  position: relative; }
 
 .project img {
   max-width: 100%;
@@ -496,26 +482,49 @@ footer h2 {
 
   section, footer {
     display: grid;
-    grid-template-columns: 1fr;
     grid-gap: 20px 0px;
     width: 100%;
     padding: 1rem 1.5rem 2rem 1.5rem;
     height: auto; }
 
-  h4, h5, figure, .project, p, .project__left, .project.right, .project__overlay, .project__right, figure.span__all, .minutes__left, .minutes__middle, .minutes__right, section ul.skills.skills__left, section ul.skills.skills__right {
-    grid-column: 1 /span 1; }
+  figure {
+    grid-column: 1 /-1; }
 
-  .project.right {
+  figure.right {
+    grid-column: 1 /-1;
+    grid-row: 4 /-1; }
+
+  .project__left, .project__right {
+    grid-column: 1 /-1; }
+
+  .project__right {
+    grid-row: 4 / -1; }
+
+  .minutes__left, .minutes__middle, .minutes__right {
+    grid-column: 1/-1; }
+
+  .minutes__left {
+    grid-row: 3/ 4; }
+
+  .minutes__middle {
+    grid-row: 4/ span 1; }
+
+  .minutes__right {
     grid-row: 5/ span 1; }
+
+  figure.span__all {
+    grid-column: 1 / -1; }
+
+  figure.span__taisanji {
+    grid-column: 3 / span 4; }
 
   p {
     grid-row: 6/ span 1; }
 
-  h4 {
-    text-align: center;
-    font-size: 1.125rem;
-    padding: 0rem 0rem 0.75rem 0rem;
-    border-bottom: 1px solid rgba(70, 73, 76, 0.2); }
+  /* apple background fix */
+  #banner {
+    background-position: center;
+    background-attachment: local; }
 
   .arrow {
     left: 0;

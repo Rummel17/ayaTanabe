@@ -1,6 +1,7 @@
 section {
   display: grid;
   grid-template-columns: repeat(8, 5fr);
+  grid-template-rows: auto auto auto;
   grid-gap: 20px 40px;
   width: 100%;
   padding: 1.5rem 3rem 3rem 3rem;
@@ -24,16 +25,23 @@ figure{
   overflow: hidden;
   box-shadow: 3px 3px 10px grey;
   border-radius: 3px;
+  grid-column: 2 / span 3;
+  grid-row: 3/ span 1;
   img {
     width:100%;
     height: auto;
     display: block;}
 }
 
+figure.right {
+  grid-column: 5/ span 3;
+  grid-row: 3/ span 1;
+}
 
+/*the link icons*/
 .project__left, .project__right{
   grid-column: 4 /span 1;
-  grid-row: 4/ span 1;
+  grid-row: 3/ span 1;
   justify-self: end;
   z-index: 10;
   i{
@@ -52,6 +60,9 @@ figure{
 figure.span__all {
   grid-column: 2 / 8;
 }
+figure.span__taisanji {
+  grid-column: 3 / 5;
+}
 /* minutes of meeting */
 figure.minutes {
   grid-column: 2 / 8;
@@ -66,6 +77,8 @@ figure.minutes {
 .minutes__right {
   grid-column: 6/8;
 }
+
+
 
 /* skills */
 

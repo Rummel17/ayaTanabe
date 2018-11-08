@@ -7,34 +7,59 @@
 
   section, footer {
     display: grid;
-    grid-template-columns: 1fr;
     grid-gap: 20px 0px;
     width: 100%;
     padding:1rem 1.5rem 2rem 1.5rem;
     height: auto;
   }
 
-
-  h4, h5, figure, .project, p, .project__left, .project.right, .project__overlay, .project__right, figure.span__all, .minutes__left, .minutes__middle, .minutes__right, section ul.skills.skills__left, section ul.skills.skills__right {
-    grid-column: 1 /span 1;
+  figure {
+    grid-column: 1 /-1;
   }
 
-  .project.right {
+  figure.right {
+    grid-column: 1 /-1;
+    grid-row: 4 /-1;
+  }
+
+  .project__left, .project__right {
+    grid-column: 1 /-1;
+  }
+
+  .project__right {
+    grid-row: 4 / -1;
+  }
+
+  .minutes__left,   .minutes__middle , .minutes__right{
+    grid-column: 1/-1;
+  }
+  .minutes__left {
+    grid-row: 3/ 4;
+  }
+  .minutes__middle {
+    grid-row: 4/ span 1;
+  }
+  .minutes__right {
     grid-row: 5/ span 1;
   }
+
+  figure.span__all {
+    grid-column: 1 / -1;
+  }
+  figure.span__taisanji {
+    grid-column: 3 / span 4;
+  }
+
 
   p{
     grid-row: 6/ span 1;
   }
 
-
-  h4 {
-    text-align: center;
-    font-size: 1.125rem;
-    padding: 0rem 0rem 0.75rem 0rem;
-    border-bottom: 1px solid $fontGrayFaded;
+  /* apple background fix */
+  #banner {
+    background-position: center;
+    background-attachment: local;
   }
-
 
   .arrow {
     left: 0;
