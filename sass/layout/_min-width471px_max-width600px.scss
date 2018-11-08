@@ -3,72 +3,112 @@
 @media all and (min-width: 470px) and (max-width: 600px) {
 
 
-  .hide1 {display: none;}
+    .hide1 {display: none;}
 
-  section, footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px 0px;
-    width: 100%;
-    padding:1rem 1.5rem 2rem 1.5rem;
-    height: auto;
+    section, footer {
+      display: grid;
+      grid-gap: 30px 0px;
+      width: 100%;
+      padding:1rem 2.5rem 2rem 2.5rem;
+      height: auto;
+    }
+
+
+
+  .headline {
+    padding: 23% 4rem 0rem 4rem;
+
+  }
+  h2 {
+    font-size: 20rem;
   }
 
+    figure {
+      grid-column: 1 /-1;
+    }
 
-  h4, h5, figure, .project, p, .project__left, .project.right, .project__overlay, .project__right, figure.span__all, .minutes__left, .minutes__middle, .minutes__right, section ul.skills.skills__left, section ul.skills.skills__right {
-    grid-column: 1 /span 1;
+    figure.right {
+      grid-column: 1 /-1;
+      grid-row: 4 /-1;
+    }
+
+    .project__left, .project__right {
+      grid-column: 1 /-1;
+    }
+
+    .project__right {
+      grid-row: 4 / -1;
+    }
+
+    .minutes__left,   .minutes__middle , .minutes__right{
+      grid-column: 1/-1;
+    }
+    .minutes__left {
+      grid-row: 3/ 4;
+    }
+    .minutes__middle {
+      grid-row: 4/ span 1;
+    }
+    .minutes__right {
+      grid-row: 5/ span 1;
+    }
+
+    figure.span__all {
+      grid-column: 1 / -1;
+    }
+    figure.span__taisanji {
+      grid-column: 3 / span 4;
+    }
+
+
+    p{
+      grid-row: 6/ span 1;
+    }
+
+    /* apple background fix */
+    #banner {
+      background-position: center;
+      background-attachment: local;
+    }
+
+    .arrow {
+      left: 0;
+      width: 100%;
+      height: 2.75rem;
+      border-radius: 0px;
+      background-color: $fontBlue;
+      -webkit-transition: background-color 200ms linear;
+      transition: background-color 200ms linear;
+    }
+
+    .arrow:hover {
+      background-color: $fontBlueDarker;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: $fontBlue;
+      border-bottom: 1px solid  rgba(82,124,153, 0.5);
+      padding: 0rem 2.5rem 0.2rem 2.5rem;
   }
+    h2 {font-size: 1.4rem;}
 
-  .project.right {
-    grid-row: 5/ span 1;
+    h5 {
+      font-size: 1.125rem;
+      padding: 0.5rem 0rem 0rem 0.5rem;
+      text-align: center;
+    }
+
+    /* apple background fix */
+    #banner {
+      background-position: center;
+      background-attachment: local;
+    }
+
+
+
   }
-
-  p{
-    grid-row: 6/ span 1;
-  }
-
-
-  h4 {
-    text-align: center;
-    padding: 0rem 0rem 0.75rem 0rem;
-    border-bottom: 1px solid $fontGrayFaded;
-  }
-
-
-  .arrow {
-    left: 0;
-    width: 100%;
-    height: 2.75rem;
-    border-radius: 0px;
-    background-color: $fontBlue;
-    -webkit-transition: background-color 200ms linear;
-    transition: background-color 200ms linear;
-  }
-
-  .arrow:hover {
-    background-color: $fontBlueDarker;
-  }
-
-  p {
-    font-size: 0.9rem;
-  }
-
-  h1 {
-    font-size: 3.5rem;
-    color: $fontBlue;
-    border-bottom: 1px solid  rgba(82,124,153, 0.5);
-    padding: 0rem 2.5rem 0.2rem 2.5rem;
-}
-  h2 {font-size: 1.6rem;}
-  h3 {font-size: 1.125rem;}
-  h4 {font-size: 1.125rem;
-  padding-top: 0.2rem;}
-  h5 {
-    font-size: 1.3rem;
-    padding: 0.5rem 0rem 1rem 0rem;
-  }
-
-
-
-
-}

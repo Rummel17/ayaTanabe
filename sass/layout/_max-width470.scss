@@ -7,11 +7,21 @@
 
   section, footer {
     display: grid;
-    grid-gap: 20px 0px;
+    grid-gap: 30px 0px;
     width: 100%;
-    padding:1rem 1.5rem 2rem 1.5rem;
+    padding:1rem 2rem 2rem 2rem;
     height: auto;
   }
+
+
+
+.headline {
+  padding: 23% 4rem 0rem 4rem;
+
+}
+h2 {
+  font-size: 20rem;
+}
 
   figure {
     grid-column: 1 /-1;
@@ -80,18 +90,18 @@
   }
 
   h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     color: $fontBlue;
     border-bottom: 1px solid  rgba(82,124,153, 0.5);
     padding: 0rem 2.5rem 0.2rem 2.5rem;
 }
-  h2 {font-size: 1.5rem;}
-  h3 {font-size: 1rem;}
-  h4 {font-size: 1rem;
-  padding-top: 0.2rem;}
+  h2 {font-size: 1.35rem;}
+
   h5 {
-    font-size: 1.125rem;
-    padding: 0.5rem 0rem 1rem 0rem;
+    font-size: 1rem;
+    padding: 1rem 0rem 0rem 0.5rem;
+    margin-top: -1rem;
+    text-align: center;
   }
 
 
