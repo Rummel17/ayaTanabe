@@ -49,21 +49,15 @@ h2 {
   line-height: 1.5;
   font-family: "Noto Sans JP"; }
 
-h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  letter-spacing: -2px;
-  padding: 5px;
-  font-weight: 600;
-  color: #46494c; }
-
 h5 {
-  grid-column: 1 / -1;
+  grid-column: 2 / 8;
   justify-self: center;
   grid-row: 2/ 3;
   line-height: 1.6;
   border-top: 1px solid rgba(70, 73, 76, 0.2);
-  padding: 1.5rem 0rem 0rem 0rem; }
+  padding: 1.5rem 0rem 0rem 0rem;
+  font-size: 1.125rem;
+  text-align: center; }
 
 li {
   font-size: 0.85rem; }
@@ -113,13 +107,13 @@ figure.right {
   grid-row: 3/ span 1; }
 
 /*the link icons*/
-.project__left, .project__right {
+.project__left, .project__right, .project__big {
   grid-column: 4 /span 1;
   grid-row: 3/ span 1;
   justify-self: end;
   z-index: 10; }
-  .project__left i, .project__right i {
-    font-size: 1.3rem;
+  .project__left i, .project__right i, .project__big i {
+    font-size: 1rem;
     background-color: #527c99;
     color: #dfdfdf;
     padding: 0.8rem;
@@ -127,6 +121,9 @@ figure.right {
 
 .project__right {
   grid-column: 7 /span 1; }
+
+.project__big {
+  grid-column: 2 /8; }
 
 /* 繋ぐコーヒー*/
 figure.span__all {
@@ -470,6 +467,28 @@ footer h2 {
   -webkit-transition: background-color 200ms linear 0ms;
   transition: background-color 250ms linear 0ms; }
 
+/* Portrait phones min400 */
+@media all and (min-width: 350px) and (max-width: 469px) {
+  h1 {
+    font-size: 2.5rem; }
+
+  .hide--sm470 {
+    display: block; }
+
+  /* apple background fix */
+  .container-fluid__banner {
+    background-position: center;
+    background-attachment: local; }
+
+  div.language-box {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    margin-left: -75px; }
+
+  section, footer {
+    padding-left: 1rem;
+    padding-right: 1rem; } }
 /* Portrait phones max470 */
 @media all and (max-width: 470px) {
   .hide1 {
