@@ -212,7 +212,7 @@ section ul.skills.skills__right {
 .navbar ul.nav li, .arrow {
   width: 112px;
   width: 112px;
-  width: 5.5rem;
+  width: 5.6rem;
   padding: 0px 0px;
   padding: 0px 0px;
   padding: 0rem 0rem; }
@@ -221,6 +221,7 @@ section ul.skills.skills__right {
   text-decoration: none;
   color: #dfdfdf;
   font-weight: 500;
+  letter-spacing: -0.5px;
   padding: 1.25rem 0rem;
   /* height of the nav */ }
 
