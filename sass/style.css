@@ -553,7 +553,8 @@ footer h2 {
     font-size: 1rem;
     padding: 1rem 0rem 0rem 0.5rem;
     margin-top: -1rem;
-    text-align: center; } }
+    text-align: center;
+    grid-column: 1 / -1; } }
 /* Portrait phones max600 */
 @media all and (min-width: 470px) and (max-width: 600px) {
   .hide1 {
@@ -638,7 +639,8 @@ footer h2 {
   h5 {
     font-size: 1.125rem;
     padding: 0.5rem 0rem 0rem 0.5rem;
-    text-align: center; }
+    text-align: center;
+    grid-column: 1 / -1; }
 
   /* apple background fix */
   #banner {
@@ -725,7 +727,8 @@ footer h2 {
   h5 {
     font-size: 1.3rem;
     padding: 0.5rem 0rem 0rem 0.5rem;
-    text-align: center; }
+    text-align: center;
+    grid-column: 1 / -1; }
 
   /* apple background fix */
   #banner {
@@ -733,9 +736,6 @@ footer h2 {
     background-attachment: local; } }
 /* tablets portrait view*/
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  .hide1 {
-    display: none; }
-
   section, footer {
     display: grid;
     grid-gap: 40px 0px;
@@ -815,7 +815,8 @@ footer h2 {
   h5 {
     font-size: 1.3rem;
     padding: 0.5rem 0rem 0rem 0rem;
-    text-align: center; }
+    text-align: center;
+    grid-column: 1 / -1; }
 
   /* apple background fix */
   #banner {
