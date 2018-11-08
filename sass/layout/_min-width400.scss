@@ -2,27 +2,5 @@
 
 @media all and (min-width:350px) and (max-width: 469px) {
 
-  h1 {font-size: 2.5rem}
 
-  .hide--sm470 {
-    display: block;
-  }
-
-  /* apple background fix */
-  .container-fluid__banner {
-    background-position: center;
-    background-attachment: local;
-  }
-
-  div.language-box {
-    position: absolute;
-    top:2%;
-    left:50%;
-    margin-left:-75px;
-  }
-
-  section, footer {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }

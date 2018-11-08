@@ -468,27 +468,6 @@ footer h2 {
   transition: background-color 250ms linear 0ms; }
 
 /* Portrait phones min400 */
-@media all and (min-width: 350px) and (max-width: 469px) {
-  h1 {
-    font-size: 2.5rem; }
-
-  .hide--sm470 {
-    display: block; }
-
-  /* apple background fix */
-  .container-fluid__banner {
-    background-position: center;
-    background-attachment: local; }
-
-  div.language-box {
-    position: absolute;
-    top: 2%;
-    left: 50%;
-    margin-left: -75px; }
-
-  section, footer {
-    padding-left: 1rem;
-    padding-right: 1rem; } }
 /* Portrait phones max470 */
 @media all and (max-width: 470px) {
   .hide1 {
@@ -514,7 +493,7 @@ footer h2 {
     grid-column: 1 /-1;
     grid-row: 4 /-1; }
 
-  .project__left, .project__right {
+  .project__left, .project__right, .project__big {
     grid-column: 1 /-1; }
 
   .project__right {
@@ -600,7 +579,7 @@ footer h2 {
     grid-column: 1 /-1;
     grid-row: 4 /-1; }
 
-  .project__left, .project__right {
+  .project__left, .project__right, .project__big {
     grid-column: 1 /-1; }
 
   .project__right {
@@ -687,7 +666,7 @@ footer h2 {
     grid-column: 1 /-1;
     grid-row: 4 /-1; }
 
-  .project__left, .project__right {
+  .project__left, .project__right, .project__big {
     grid-column: 1 /-1; }
 
   .project__right {
@@ -777,7 +756,7 @@ footer h2 {
     grid-column: 1 /-1;
     grid-row: 4 /-1; }
 
-  .project__left, .project__right {
+  .project__left, .project__right, .project__big {
     grid-column: 1 /-1; }
 
   .project__right {
